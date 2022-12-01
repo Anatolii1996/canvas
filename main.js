@@ -34,6 +34,7 @@ canvas.addEventListener("mousemove", (e) => {
     prevY = currentY;
 });
 
+let myColor;
 
 let palitra = document.querySelector(".palitra");
 
@@ -46,11 +47,17 @@ palitra.addEventListener("click", function active(e) {
 })
 
 
-let lines = document.querySelector('.lines');
-lines.addEventListener("click", (e)=>{
+let lines = document.querySelectorAll('.dote');
+lines.forEach(line => {
+    line.addEventListener("click", handlerLine);
+});
+
+function handlerLine(e) {
     linear = e.target;
-    linear.classList.add("active");
-})
+    linear.parentElement.classList.add("active");
+}
+
+
 
 let clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => {
