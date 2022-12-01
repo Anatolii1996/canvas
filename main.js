@@ -36,15 +36,18 @@ canvas.addEventListener("mousemove", (e) => {
 
 let myColor;
 
-let palitra = document.querySelector(".palitra");
+let palitra = document.querySelectorAll(".color");
 
 let color;
 
-palitra.addEventListener("click", function active(e) {
+palitra.forEach(colorItem=>{
+    colorItem.addEventListener("click", handlerColor);
+})
+function handlerColor(e) {
     color = e.target;
     color.classList.add("active");
-    // color.stopPropagation();
-})
+}
+
 
 
 let lines = document.querySelectorAll('.dote');
