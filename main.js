@@ -15,7 +15,6 @@ canvas.addEventListener("mouseup", () => {
 });
 
 canvas.addEventListener("mousemove", (e) => {
-    // console.log(this);
     if (prevX == null || prevY == null || !drow) {
         prevX = e.offsetX;
         prevY = e.offsetY;
@@ -27,7 +26,6 @@ canvas.addEventListener("mousemove", (e) => {
     cxt.beginPath();
     cxt.moveTo(prevX, prevY);
     cxt.lineTo(currentX, currentY);
-    // cxt.strokeStyle = color.style.backgroundColor;
     cxt.stroke();
 
     prevX = currentX;
@@ -40,12 +38,26 @@ let palitra = document.querySelectorAll(".color");
 
 let color;
 
+
 palitra.forEach(colorItem=>{
+    colorItem.addEventListener("click", deleteActive);
     colorItem.addEventListener("click", handlerColor);
+   
 })
 function handlerColor(e) {
     color = e.target;
+    
     color.classList.add("active");
+}
+function deleteActive(e) {
+    color = e.target;
+    let parent = color.parentElement;
+    let neizbor = parent.children;
+    for (const i of neizbor) {
+        if(i.classList.contains("active")){
+            i.classList.remove("active");
+        }
+    }
 }
 
 
