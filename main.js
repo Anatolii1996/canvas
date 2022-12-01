@@ -39,36 +39,47 @@ let palitra = document.querySelectorAll(".color");
 let color;
 
 
-palitra.forEach(colorItem=>{
+palitra.forEach(colorItem => {
     colorItem.addEventListener("click", deleteActive);
     colorItem.addEventListener("click", handlerColor);
-   
 })
-function handlerColor(e) {
-    color = e.target;
-    
-    color.classList.add("active");
-}
 function deleteActive(e) {
     color = e.target;
     let parent = color.parentElement;
     let neizbor = parent.children;
     for (const i of neizbor) {
-        if(i.classList.contains("active")){
+        if (i.classList.contains("active")) {
             i.classList.remove("active");
         }
     }
 }
+function handlerColor(e) {
+    color = e.target;
+
+    color.classList.add("active");
+}
+
 
 
 
 let lines = document.querySelectorAll('.dote');
 lines.forEach(line => {
+    line.addEventListener("click", deleteActiveLine);
     line.addEventListener("click", handlerLine);
 });
-
+function deleteActiveLine(e) {
+   let linear = e.target;
+   let linearParent = linear.parentElement;
+   let linearPraParent =linearParent.parentElement;
+   let linearNeizbor=linearPraParent.children;
+   for (const i of linearNeizbor) {
+    if (i.classList.contains("active")) {
+        i.classList.remove("active");
+    }
+   }
+}
 function handlerLine(e) {
-    linear = e.target;
+  let  linear = e.target;
     linear.parentElement.classList.add("active");
 }
 
