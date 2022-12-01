@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  height: 600px;
+  margin: 15px 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.container .side-bar {
+  background-color: rgb(234, 226, 226);
+  width: 20%;
+  height: 100%;
+}
+.container .side-bar .palitra {
+  width: 100%;
+  height: 40%;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "blue1 blue2 blue3 blue4 blue5 blue6" "grey1 grey2 grey3 grey4 grey5 grey6" "green1 green2 green3 green4 green5 green6" "pink1 pink2 pink3 pink4 pink5 pink6" "violet1 violet2 violet3 violet4 violet5 violet6";
+  -ms-grid-rows: auto 10px auto 10px auto 10px auto 10px auto;
+  grid-template-rows: repeat(5, auto);
+  -ms-grid-columns: auto 10px auto 10px auto 10px auto 10px auto 10px auto;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 10px;
+  justify-items: center;
+}
+.container .side-bar .palitra .color {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.container .side-bar .palitra .blue1 {
+  background-color: blue;
+}
+.container .side-bar .palitra .blue2 {
+  background-color: rgb(53, 101, 212);
+}
+.container .side-bar .palitra .blue3 {
+  background-color: rgb(5, 234, 246);
+}
+.container .side-bar .palitra .blue4 {
+  background-color: rgb(135, 238, 243);
+}
+.container .side-bar .palitra .blue5 {
+  background-color: black;
+}
+.container .side-bar .palitra .blue6 {
+  background-color: rgb(67, 55, 55);
+}
+.container .side-bar .palitra .grey1 {
+  background-color: gray;
+}
+.container .side-bar .palitra .grey2 {
+  background-color: lightgray;
+}
+.container .side-bar .palitra .grey3 {
+  background-color: orange;
+}
+.container .side-bar .palitra .grey4 {
+  background-color: rgb(255, 145, 0);
+}
+.container .side-bar .palitra .grey5 {
+  background-color: rgb(255, 221, 0);
+}
+.container .side-bar .palitra .grey6 {
+  background-color: rgb(243, 201, 76);
+}
+.container .side-bar .palitra .green1 {
+  background-color: rgb(4, 40, 4);
+}
+.container .side-bar .palitra .green2 {
+  background-color: green;
+}
+.container .side-bar .palitra .green3 {
+  background-color: rgb(16, 172, 16);
+}
+.container .side-bar .palitra .green4 {
+  background-color: lightgreen;
+}
+.container .side-bar .palitra .green5 {
+  background-color: rgb(240, 106, 23);
+}
+.container .side-bar .palitra .green6 {
+  background-color: rgb(255, 142, 3);
+}
+.container .side-bar .palitra .pink1 {
+  background-color: rgb(246, 183, 106);
+}
+.container .side-bar .palitra .pink2 {
+  background-color: rgb(244, 201, 148);
+}
+.container .side-bar .palitra .pink3 {
+  background-color: rgb(72, 34, 3);
+}
+.container .side-bar .palitra .pink4 {
+  background-color: rgb(106, 57, 17);
+}
+.container .side-bar .palitra .pink5 {
+  background-color: rgb(165, 88, 25);
+}
+.container .side-bar .palitra .pink6 {
+  background-color: rgb(239, 140, 59);
+}
+.container .side-bar .palitra .violet1 {
+  background-color: rgb(175, 100, 175);
+}
+.container .side-bar .palitra .violet2 {
+  background-color: violet;
+}
+.container .side-bar .palitra .violet3 {
+  background-color: rgb(226, 151, 226);
+}
+.container .side-bar .palitra .violet4 {
+  background-color: rgb(244, 182, 244);
+}
+.container .side-bar .palitra .violet5 {
+  background-color: rgb(215, 199, 215);
+}
+.container .side-bar .palitra .violet6 {
+  background-color: beige;
+}
+.container .side-bar .lines {
+  width: 100%;
+  height: 40%;
+}
+.container .side-bar .lines .line {
+  width: 100%;
+  height: 14%;
+  margin-bottom: 10px;
+  margin-top: 12px;
+  padding-top: 15px;
+  border-top: 5px solid rgb(209, 56, 209);
+}
+.container .side-bar .lines .line .dote {
+  width: 90%;
+  height: 1px;
+  background-color: black;
+  margin: auto;
+  cursor: pointer;
+}
+.container .side-bar .lines .line .dote2 {
+  height: 2px;
+}
+.container .side-bar .lines .line .dote3 {
+  height: 3px;
+}
+.container .side-bar .lines .line .dote4 {
+  height: 4px;
+}
+.container .side-bar .lines .line .dote5 {
+  height: 5px;
+}
+.container .side-bar .buttons {
+  margin: 15px auto;
+}
+.container .side-bar .buttons button {
+  display: block;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+}
+.container .side-bar .buttons .clear {
+  margin-bottom: 20px;
+}
+.container canvas {
+  height: 615px;
+  width: 1300px;
+}
+.container .active {
+  border: 2px solid red;
+}
