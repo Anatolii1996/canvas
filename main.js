@@ -82,7 +82,7 @@ function deleteActiveLine(e) {
 function handlerLine(e) {
   let  linear = e.target;
     linear.parentElement.classList.add("active");
-    cxt.lineWidth=
+    cxt.lineWidth=linear.dataset.line;
 }
 
 
