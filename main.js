@@ -57,6 +57,7 @@ function handlerColor(e) {
     color = e.target;
 
     color.classList.add("active");
+    cxt.strokeStyle=color.dataset.clr;
 }
 
 
@@ -81,6 +82,7 @@ function deleteActiveLine(e) {
 function handlerLine(e) {
   let  linear = e.target;
     linear.parentElement.classList.add("active");
+    cxt.lineWidth=
 }
 
 
